@@ -7,8 +7,6 @@ using SportsStore.Domain.Abstract;
 using SportsStore.Domain.Entities;
 using SportsStore.WebUI.Models;
 
-//Z Testing a change
-
 namespace SportsStore.WebUI.Controllers
 {
     public class ProductController : Controller
