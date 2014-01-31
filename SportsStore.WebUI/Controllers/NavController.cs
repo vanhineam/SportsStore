@@ -27,6 +27,5 @@ namespace SportsStore.WebUI.Controllers
 
             return PartialView(categories);
         }
-
     }
 }
