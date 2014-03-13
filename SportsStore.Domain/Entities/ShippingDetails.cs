@@ -1,9 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace SportsStore.Domain.Entities
-{
-    public class ShippingDetails
-    {
+namespace SportsStore.Domain.Entities {
+
+    public class ShippingDetails {
         [Required(ErrorMessage = "Please enter a name")]
         public string Name { get; set; }
 

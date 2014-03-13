@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0A76655D-A994-4535-A145-59E4D99A6110}</ProjectGuid>
+    <ProjectGuid>{58F662D2-D47F-4723-9DB2-1D8C37AC54FC}</ProjectGuid>
     <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -39,22 +39,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer">
-      <HintPath>..\packages\EntityFramework.6.0.2\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1312.1622\lib\net40\Moq.dll</HintPath>
+      <HintPath>..\..\..\00 - Moq Library\Moq.4.0.10827\NET40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+      <HintPath>..\..\..\00 - Ninject Library\Ninject-3.0.1.10-release-net-4.5\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -71,16 +65,15 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -103,11 +96,11 @@
       <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Providers">
-      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
@@ -123,16 +116,15 @@
     </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <Private>True</Private>
-      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\Bundles\Foundation.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
@@ -213,83 +205,21 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="sass\Site.scss" />
-    <Content Include="sass\foundation\components\_visibility.scss" />
-    <Content Include="sass\foundation\components\_type.scss" />
-    <Content Include="sass\foundation\components\_top-bar.scss" />
-    <Content Include="sass\foundation\components\_tooltips.scss" />
-    <Content Include="sass\foundation\components\_thumbs.scss" />
-    <Content Include="sass\foundation\components\_tabs.scss" />
-    <Content Include="sass\foundation\components\_tables.scss" />
-    <Content Include="sass\foundation\components\_switch.scss" />
-    <Content Include="sass\foundation\components\_sub-nav.scss" />
-    <Content Include="sass\foundation\components\_split-buttons.scss" />
-    <Content Include="sass\foundation\components\_side-nav.scss" />
-    <Content Include="sass\foundation\components\_reveal.scss" />
-    <Content Include="sass\foundation\components\_range-slider.scss" />
-    <Content Include="sass\foundation\components\_progress-bars.scss" />
-    <Content Include="sass\foundation\components\_pricing-tables.scss" />
-    <Content Include="sass\foundation\components\_panels.scss" />
-    <Content Include="sass\foundation\components\_pagination.scss" />
-    <Content Include="sass\foundation\components\_orbit.scss" />
-    <Content Include="sass\foundation\components\_offcanvas.scss" />
-    <Content Include="sass\foundation\components\_magellan.scss" />
-    <Content Include="sass\foundation\components\_labels.scss" />
-    <Content Include="sass\foundation\components\_keystrokes.scss" />
-    <Content Include="sass\foundation\components\_joyride.scss" />
-    <Content Include="sass\foundation\components\_inline-lists.scss" />
-    <Content Include="sass\foundation\components\_grid.scss" />
-    <Content Include="sass\foundation\components\_global.scss" />
-    <Content Include="sass\foundation\components\_forms.scss" />
-    <Content Include="sass\foundation\components\_flex-video.scss" />
-    <Content Include="sass\foundation\components\_dropdown-buttons.scss" />
-    <Content Include="sass\foundation\components\_dropdown.scss" />
-    <Content Include="sass\foundation\components\_clearing.scss" />
-    <Content Include="sass\foundation\components\_buttons.scss" />
-    <Content Include="sass\foundation\components\_button-groups.scss" />
-    <Content Include="sass\foundation\components\_breadcrumbs.scss" />
-    <Content Include="sass\foundation\components\_block-grid.scss" />
-    <Content Include="sass\foundation\components\_alert-boxes.scss" />
-    <Content Include="sass\foundation\components\_accordion.scss" />
-    <Content Include="sass\foundation\_settings.scss" />
-    <Content Include="sass\foundation\_functions.scss" />
-    <Content Include="sass\_normalize.scss" />
-    <Content Include="sass\_foundation.scss" />
-    <Content Include="sass\_foundation.mvc.scss" />
-    <Content Include="App_Readme\Foundation_readme.md" />
-    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
-    <Content Include="Scripts\foundation\fastclick.js" />
-    <Content Include="Scripts\foundation\foundation.abide.js" />
-    <Content Include="Scripts\foundation\foundation.accordion.js" />
-    <Content Include="Scripts\foundation\foundation.alert.js" />
-    <Content Include="Scripts\foundation\foundation.clearing.js" />
-    <Content Include="Scripts\foundation\foundation.dropdown.js" />
-    <Content Include="Scripts\foundation\foundation.equalizer.js" />
-    <Content Include="Scripts\foundation\foundation.interchange.js" />
-    <Content Include="Scripts\foundation\foundation.joyride.js" />
-    <Content Include="Scripts\foundation\foundation.js" />
-    <Content Include="Scripts\foundation\foundation.magellan.js" />
-    <Content Include="Scripts\foundation\foundation.offcanvas.js" />
-    <Content Include="Scripts\foundation\foundation.orbit.js" />
-    <Content Include="Scripts\foundation\foundation.reveal.js" />
-    <Content Include="Scripts\foundation\foundation.tab.js" />
-    <Content Include="Scripts\foundation\foundation.tooltip.js" />
-    <Content Include="Scripts\foundation\foundation.topbar.js" />
-    <Content Include="Scripts\foundation\jquery.cookie.js" />
-    <Content Include="Scripts\jquery-1.8.2.js" />
-    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.js" />
-    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
     <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\knockout-2.2.0.debug.js" />
-    <Content Include="Scripts\knockout-2.2.0.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.5.3.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -306,13 +236,13 @@
     <Content Include="Views\Shared\ProductSummary.cshtml" />
     <Content Include="Views\Nav\Menu.cshtml" />
     <Content Include="Views\Cart\Index.cshtml" />
+    <Content Include="Views\Cart\Summary.cshtml" />
     <Content Include="Views\Cart\Checkout.cshtml" />
     <Content Include="Views\Cart\Completed.cshtml" />
     <Content Include="Views\Shared\_AdminLayout.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\Edit.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,7 +252,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SportsStore.Domain\SportsStore.Domain.csproj">
-      <Project>{e54e5f3d-ffb4-4d2c-afbc-c61ae7a6e8f0}</Project>
+      <Project>{2ab929c1-6fd0-49c6-98da-f07834371773}</Project>
       <Name>SportsStore.Domain</Name>
     </ProjectReference>
   </ItemGroup>
@@ -344,7 +274,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:49660/</IISUrl>
+          <IISUrl>http://localhost:61576/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

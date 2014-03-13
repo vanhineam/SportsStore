@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D5AC2976-F1BB-4791-9C11-13EB9D552222}</ProjectGuid>
+    <ProjectGuid>{25432475-2A50-4FED-BA96-370FB4309584}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SportsStore.UnitTests</RootNamespace>
@@ -37,10 +37,10 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Moq">
-      <HintPath>..\packages\Moq.4.2.1312.1622\lib\net40\Moq.dll</HintPath>
+      <HintPath>..\packages\Moq.4.2.1402.2112\lib\net40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.0.1.10\lib\net45-full\Ninject.dll</HintPath>
+      <HintPath>..\packages\Ninject.3.0.2-unstable-9051\lib\net45-full\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Web" />
@@ -59,22 +59,20 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="AdminSecurityTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\AdminTests.cs" />
-    <Compile Include="Tests\CartTests.cs" />
-    <Compile Include="Tests\UnitTest1.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
-    <None Include="packages.config" />
+    <Compile Include="UnitTest1.cs" />
+    <Compile Include="CartTests.cs" />
+    <Compile Include="AdminTests.cs" />
+    <Compile Include="ImageTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SportsStore.Domain\SportsStore.Domain.csproj">
-      <Project>{e54e5f3d-ffb4-4d2c-afbc-c61ae7a6e8f0}</Project>
+      <Project>{2ab929c1-6fd0-49c6-98da-f07834371773}</Project>
       <Name>SportsStore.Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\SportsStore.WebUI\SportsStore.WebUI.csproj">
-      <Project>{0a76655d-a994-4535-a145-59e4d99a6110}</Project>
+      <Project>{58f662d2-d47f-4723-9db2-1d8c37ac54fc}</Project>
       <Name>SportsStore.WebUI</Name>
     </ProjectReference>
   </ItemGroup>
